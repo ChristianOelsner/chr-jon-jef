@@ -1,0 +1,56 @@
+﻿@model JJC_Music_Store_v_1_3.Models.Entity.AlbumModel
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>AlbumModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ArtistModels.ArtistName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArtistModels.ArtistName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GenreModels.GenreName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GenreModels.GenreName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AlbumName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AlbumName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
